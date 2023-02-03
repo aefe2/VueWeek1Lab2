@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*font-family: "Montserrat Thin";*/
+    font-family: "JetBrains Mono";
+}
+
+h3 {
+    font-weight: 500;
+    /*font-weight: bolder;*/
+}
+
+p {
+    font-size: 15px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: start;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: grey 2px solid;
+    border-radius: 20px;
+    box-shadow: black 0 0 2px;
+}
+
+.column1 {
+    order: 3;
+}
+
+.column2 {
+    order: 1;
+}
+
+/*li {*/
+/*    !*list-style-image: url('../assets/li-decor.png');*!*/
+/*    !*list-style-type: none;*!*/
+/*}*/
+
+.todo-item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+}
+
+.todo-done {
+    padding: 2px;
+    margin-left: 5px;
+}
+
+.todo-done:hover {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.todo-form-mask {
+    display: none;
+}
+
+.todo-form {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    flex-basis: content;
+    border-radius: 10px;
+    box-shadow: grey 2px 2px 12px;
+    position: fixed;
+    background-color: white;
+}
+
+.todo-form-input {
+    margin: 5px;
+}
+
+label {
+    text-align: center;
+    font-size: small;
+}
+
+select {
+    align-self: center;
+    width: min-content;
+}
+
+.add-todo {
+
+}
+
+/*input[type='button'] {*/
+/*    background-color: transparent;*/
+/*    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;*/
+/*    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;*/
+/*}*/
+/*input[type='button']:hover, input[type='button']:focus {*/
+/*    box-shadow: 0 0 40px 40px #669693 inset;*/
+/*    color: #fff;*/
+/*    outline: 0;*/
+/*}*/
+
