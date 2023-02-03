@@ -12,183 +12,26 @@
 </head>
 <body>
 <div id="app">
-    <div class="wrapper">
-        <input type="button" value="Добавить заметку" class="add-todo grow_ellipse">
+    <!--    <div class="wrapper">-->
+    <!--        <input type="button" value="Добавить заметку" class="add-todo">-->
+    <!--    </div>-->
+    <div class="remaining-todos">
+        <p>Completed Tasks: {{todos.filter(todo => {
+            return todo.done === true
+        }).length}}</p>
+        <p>Pending Tasks: {{todos.filter(todo => {
+            return todo.done === false
+        }).length}}</p>
     </div>
-    <div class="todo-form-mask">
-        <form class="todo-form">
-            <input class="todo-form-input" type="text" name="NewTodo" placeholder="Заголовок заметки">
-            <input class="todo-form-input" type="text" placeholder="Заметка">
-            <label for="todo-select">Выберите столбец</label>
-            <select name="Столбец" id="todo-select" class="todo-form-input">
-                <option class="todo-option" value="1">1</option>
-                <option class="todo-option" value="2">2</option>
-                <option class="todo-option" value="3">3</option>
-            </select>
-            <input class="todo-form-input" type="button" value="Готово">
-        </form>
-    </div>
-    <div class="container">
+    <div class="columns-container">
         <div class="column column1">
-            <div class="todo-card">
-                <h3>Заголовок заметки</h3>
-                <ul class="todo-list">
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                </ul>
-            </div>
-            <div class="todo-card">
-                <h3>Заголовок заметки</h3>
-                <ul class="todo-list">
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                </ul>
-            </div>
-            <div class="todo-card">
-                <h3>Заголовок заметки</h3>
-                <ul class="todo-list">
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                </ul>
-            </div>
+            <todo-list v-bind:todos="todos"></todo-list>
         </div>
-
         <div class="column column2">
-            <div class="todo-card">
-                <h3>Заголовок заметки</h3>
-                <ul class="todo-list">
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                </ul>
-            </div>
-            <div class="todo-card">
-                <h3>Заголовок заметки</h3>
-                <ul class="todo-list">
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                </ul>
-            </div>
-            <div class="todo-card">
-                <h3>Заголовок заметки</h3>
-                <ul class="todo-list">
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                </ul>
-            </div>
-            <div class="todo-card">
-                <h3>Заголовок заметки</h3>
-                <ul class="todo-list">
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                </ul>
-            </div>
-            <div class="todo-card">
-                <h3>Заголовок заметки</h3>
-                <ul class="todo-list">
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                </ul>
-            </div>
+            <todo-list v-bind:todos="todos"></todo-list>
         </div>
-
         <div class="column column3">
-            <div class="todo-card">
-                <h3>Заголовок заметки</h3>
-                <ul class="todo-list">
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                    <li class="todo-item">
-                        <p>Что то сделать</p>
-                        <input class="todo-done" type="button" value="Готово">
-                    </li>
-                </ul>
-            </div>
+            <todo-list v-bind:todos="todos"></todo-list>
         </div>
     </div>
 </div>
