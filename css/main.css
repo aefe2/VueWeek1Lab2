@@ -8,10 +8,6 @@ body {
     font-weight: 1000;
 }
 
-p {
-    font-size: 15px;
-}
-
 .columns-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -37,6 +33,7 @@ p {
 .column2 {
     order: 1;
 }
+
 
 .todo-item {
     display: flex;
@@ -81,11 +78,43 @@ select {
 }
 
 .todo-header {
+    word-break: break-word;
+    width: 200px;
     background-color: rgba(255, 165, 0, 0.2);
     padding: 1px 2px 1px 2px;
     border-radius: 5px;
 }
-.todo-meta {
 
+.todo-meta {
+    word-break: break-word;
+    width: 200px;
 }
 
+.extra {
+    display: flex;
+    justify-content: space-between;
+}
+
+.trash {
+    cursor: pointer;
+    background: url("../assets/trash.png") no-repeat center/90%;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.trash:before {
+    content: 'Delete';
+    position: relative;
+    right: 50px;
+    font-family: "Montserrat";
+}
+
+
+.edit {
+    cursor: pointer;
+    background: url("../assets/edit.png") no-repeat center/90%;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
