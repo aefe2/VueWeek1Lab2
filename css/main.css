@@ -47,6 +47,11 @@ body {
     margin-left: 5px;
 }
 
+.todo-status {
+    display: flex;
+    margin: auto;
+}
+
 .todo-done:hover {
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.1);
@@ -91,8 +96,9 @@ select {
 }
 
 .extra {
-    display: flex;
-    justify-content: space-between;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    margin-bottom: 10px;
 }
 
 .trash {
@@ -104,7 +110,7 @@ select {
 }
 
 .trash:before {
-    content: 'Delete';
+    /*content: 'Delete';*/
     position: relative;
     right: 50px;
     font-family: "Montserrat";
@@ -117,4 +123,30 @@ select {
     width: 20px;
     height: 20px;
     border: none;
+}
+.edit:after {
+    content: 'Edit';
+    position: relative;
+    left: 20px;
+    font-family: "Montserrat";
+}
+
+button {
+    font-family: Montserrat;
+    margin-top: 10px;
+    padding: 3px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+button:hover {
+    transition: background-color;
+    transition-duration: .3s;
+    background-color: rgba(128, 128, 128, 0.21);
+}
+
+#deleteContent, #deletePost {
+    width: 20px;
+    height: 20px;
 }
