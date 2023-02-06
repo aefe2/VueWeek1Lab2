@@ -12,11 +12,13 @@
 </head>
 <body>
 <div id="app">
+    <todo-create v-on:create-todo="createTodo"></todo-create>
     <div class="columns-container">
         <div class="column column1">
             <todo-list v-bind:todos="todos"></todo-list>
-            <todo-create v-on:create-todo="createTodo"></todo-create>
         </div>
+        <div class="column column2"></div>
+        <div class="column column3"></div>
     </div>
 </div>
 </body>

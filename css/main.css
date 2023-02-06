@@ -5,7 +5,7 @@
 
 body {
     font-family: "Montserrat Thin";
-    font-weight: 1000;
+    /*font-weight: 1000;*/
 }
 
 .columns-container {
@@ -103,33 +103,33 @@ select {
 
 .trash {
     cursor: pointer;
-    background: url("../assets/trash.png") no-repeat center/90%;
-    width: 20px;
-    height: 20px;
+    /*background: url("../assets/trash.png") no-repeat center/90%;*/
+    width: 50px;
+    /*height: 20px;*/
     border: none;
 }
 
-.trash:before {
-    /*content: 'Delete';*/
-    position: relative;
-    right: 50px;
-    font-family: "Montserrat";
-}
+/*.trash:before {*/
+/*    !*content: 'Delete';*!*/
+/*    position: relative;*/
+/*    right: 50px;*/
+/*    font-family: "Montserrat";*/
+/*}*/
 
 
 .edit {
     cursor: pointer;
-    background: url("../assets/edit.png") no-repeat center/90%;
-    width: 20px;
-    height: 20px;
+    /*background: url("../assets/edit.png") no-repeat center/90%;*/
+    width: 35px;
+    /*height: 20px;*/
     border: none;
 }
-.edit:after {
-    content: 'Edit';
-    position: relative;
-    left: 20px;
-    font-family: "Montserrat";
-}
+/*.edit:after {*/
+/*    content: 'Edit';*/
+/*    position: relative;*/
+/*    left: 20px;*/
+/*    font-family: "Montserrat";*/
+/*}*/
 
 button {
     font-family: Montserrat;
@@ -149,4 +149,8 @@ button:hover {
 #deleteContent, #deletePost {
     width: 20px;
     height: 20px;
+}
+
+.create-container {
+    margin: 10px;
 }
